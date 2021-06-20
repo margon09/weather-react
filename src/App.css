@@ -1,0 +1,66 @@
+.widget {
+	width: 300px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	border: 1px solid #c6eaf1;
+	font-weight: 500;
+	font-family: Arial, Helvetica, sans-serif;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info {
+	margin: auto;
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+
+/* ul{
+	list-style-type: none;
+} */
+
+li {
+	display: block;
+	margin-left: -32px;
+	border-bottom: 1px solid #daedf7;
+	text-decoration: none;
+}
+
+.city {
+	background-color: #daedf7;
+	color: #356c87;
+}
+
+.items {
+	border-bottom: 1px solid #dddddd;
+}
+
+.noBorder {
+	border-bottom: none;
+}
+
+.input {
+	margin-top: 0;
+	margin-left: 0.7rem;
+	margin-bottom: 0.5rem;
+	outline: none;
+	border-radius: 5px;
+	border: 1.5px solid #dddddd;
+	color: rgb(85, 85, 85);
+	line-height: 30px;
+}
+
+.myBtn {
+	margin-left: 0.3rem;
+	border-radius: 5px;
+	border: 1.5px solid #dddddd;
+	background-color: white;
+	height: 35px;
+}
+
+.propItems {
+	margin: 0rem 0.7rem 0.7rem 0.7rem;
+	padding-top: 0.8rem;
+}
