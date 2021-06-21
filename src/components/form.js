@@ -12,7 +12,7 @@ export default class Form extends Component {
 			humidity: null,
 			wind: null,
 			error: null,
-			url: "http://127.0.0.1/"
+			url: "https://tv2-weather-node.herokuapp.com/"
 		};
 	}
 
@@ -49,6 +49,10 @@ export default class Form extends Component {
 					})
 					: this.setState({
 						error: resp.data,
+						city: "N/A",
+						temperature: "N/A",
+						humidity: "N/A",
+						wind: "N/A"
 					})
 
 			}).catch(error => {
@@ -65,9 +69,9 @@ export default class Form extends Component {
 			<div >
 				<ul>
 					<li className="city"><p className="propItems">Weather in <b>{city}</b></p></li>
-					<li className="items"><p className="propItems">Temperature: <b>{temperature}</b></p></li>
-					<li className="items"><p className="propItems">Humidity : <b>{humidity}</b></p></li>
-					<li className="items"><p className="propItems">Wind: <b>{wind}</b></p></li>
+					<li className="items temper"><p className="propItems">Temperature: <b>{temperature}</b></p></li>
+					<li className="items humid"><p className="propItems">Humidity : <b>{humidity}</b></p></li>
+					<li className="items windy"><p className="propItems">Wind: <b>{wind}</b></p></li>
 					<li className="items noBorder"><p className="propItems">{error}</p></li>
 				</ul>
 				<form action="/?city=" className='form' onSubmit={e => this.handleSubmit(e)}>
