@@ -12,25 +12,41 @@ export default class Form extends Component {
 			humidity: null,
 			wind: null,
 			error: null,
-			url: "http://127.0.0.1/"
+			url: "https://tv2-weather-node.herokuapp.com/"
 		};
 	}
 
 	componentDidMount() {
-		axios.get(this.state.url + "?javascript=enabled")
+
+		axios.get(this.handleUrl(window.location.href))
 			.then(resp => {
 				console.log(resp.data);
-				this.setState({
-					city: resp.data.city,
-					temperature: resp.data.temperature,
-					humidity: resp.data.humidity,
-					wind: resp.data.wind
-				})
+				resp.data.city
+					? this.setState({
+						city: resp.data.city,
+						temperature: resp.data.temperature,
+						humidity: resp.data.humidity,
+						wind: resp.data.wind
+					})
+					: this.setState({
+						error: resp.data,
+						city: "N/A",
+						temperature: "N/A",
+						humidity: "N/A",
+						wind: "N/A"
+					})
 			}).catch(error => {
 				console.log(error);
+				this.setState({ error: error });
 			})
 	}
 
+	handleUrl = (url) => {
+		if (url.includes("?city="))
+			return this.state.url + url.substring(url.indexOf('?')) + "&javascript=enabled";
+		else
+			return this.state.url + "?javascript=enabled";
+	}
 
 	handleSubmit = (e) => {
 		e.preventDefault();
