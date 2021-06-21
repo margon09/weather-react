@@ -8,6 +8,9 @@ In the project directory, you will need to run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000/](http://localhost:3000/) to view it in the browser.
+For the frontend to work correctly you need to have the Node backend running.
+Github link to Node backend:
+https://github.com/margon09/weather-node
 Also deployed on Heroku Cloud:
 Open [https://tv-weather-react.herokuapp.com/](https://tv-weather-react.herokuapp.com/) to view it in the browser.
 
