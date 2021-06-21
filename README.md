@@ -13,6 +13,8 @@ Github link to Node backend:
 https://github.com/margon09/weather-node
 Also deployed on Heroku Cloud:
 Open [https://tv-weather-react.herokuapp.com/](https://tv-weather-react.herokuapp.com/) to view it in the browser.
+Bear in mind that the Heroku deployment goes into sleep-mode when no requests are sent as I'm using the free dynos.
+It takes roughly 20 seconds to load on the browser, after which it works normally and goes back to sleep after 30 minutes of inactivity.
 
 You can send GET requests direcly if on localhost e.g.
 
