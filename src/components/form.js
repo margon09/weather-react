@@ -12,7 +12,7 @@ export default class Form extends Component {
 			humidity: null,
 			wind: null,
 			error: null,
-			url: "https://tv2-weather-node.herokuapp.com/"
+			url: "http://127.0.0.1/"
 		};
 	}
 
